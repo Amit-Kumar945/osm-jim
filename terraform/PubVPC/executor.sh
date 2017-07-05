@@ -1,11 +1,5 @@
 #!/bin/bash
 
-VPC_NAME=$1
-AWS_REGION=$2
-ROUTE_53_ZONE_NAME=$3
-VPC_IP_COUNT=$4
-SUBNET_IP_COUNT=$5
-
 function logStatement() {
   LOG_MESSAGE=$1
   echo $LOG_MESSAGE
