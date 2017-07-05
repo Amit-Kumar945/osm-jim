@@ -19,7 +19,7 @@ function validateInputs() {
 function createSetup() {
   logStatement "Creating setup"
   pushd ..
-  make setup-simplePubVPC REGION=$1 ROUTE_53_ZONE_NAME=$2 VPC_CIDR=$3 VPC_NAME=$4
+  make setup-PubVPC REGION=$1 ROUTE_53_ZONE_NAME=$2 VPC_CIDR=$3 VPC_NAME=$4
   popd
 }
 
