@@ -35,14 +35,15 @@ parameters {
 
     '#!/bin/bash\n'  +
 
-    'echo "I'll set up a VPC ${vpc_name} with CIDR ${vpc_cidr} having domain as ${zone_name} in ${aws_region} region"\n' +
+    'echo "I will set up a VPC ${vpc_name} with CIDR ${vpc_cidr} having domain as ${zone_name} in ${aws_region} region"\n' +
 
 
     'cd terraform/HAPubVPC\n' +
     'source executor.sh\n' +
-    'validateInputs' +
-    'createSetup ${aws_region} ${zone_name} ${vpc_cidr} ${subnet_a_cidr} ${subnet_b_cidr} ${vpc_name} ${AWS_ACCESS_KEY_ID} ${AWS_SECRET_ACCESS_KEY}""\n' 
-  
+    'validateInputs\n' +
+    '#createSetup ${AWS_ACCESS_KEY_ID} ${AWS_SECRET_ACCESS_KEY}\n'  +
+     'destroySetup ${AWS_ACCESS_KEY_ID} ${AWS_SECRET_ACCESS_KEY}\n'
+ 
 
     )
     }
