@@ -9,7 +9,7 @@ module "server" {
   key_pair_id        = "${var.key_name}"
   aws_region_os      = "${var.aws_region}-centos"
   aws_region         = "${var.aws_region}"
-  security_group_ids = ["${module.vpc.default_sg_id}"]
+  security_group_ids = ["${var.sg_id}"]
   type               = "${var.instance_type}"
-  zone_id            = "${module.vpc.zone_id}"
+  zone_id            = "${var.vpc_zone_id}"
 }
