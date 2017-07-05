@@ -8,11 +8,11 @@ parameters {
 	stringParam('SG_ID', 'sg-b48414c5')
 	choiceParam('INSTANCE_TYPE', ['t2.micro', 't2.medium'])
 	stringParam('VPC_ZONE_ID', 'Z3O4QAA955WU8G')
-	passwordParameterDefinition {
+	password {
      	 name('AWS_ACCESS_KEY_ID')
       	 defaultValue(null)
     	}
-	passwordParameterDefinition {
+	password {
          name('AWS_SECRET_ACCESS_KEY')
          defaultValue(null)
         }
