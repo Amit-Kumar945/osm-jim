@@ -2,6 +2,12 @@ provider "aws" {
   region = "${var.aws_region}"
 }
 
+module "key_pair" {
+  source          = "github.com/opstree-terraform/key_pair"
+  public_key_path = "${var.pub_key_path}"
+  name            = "${var.vpc_name}-key"
+}
+
 module "vpc" {
   source            = "github.com/opstree-terraform/vpc"
   cidr              = "${var.vpc_cidr}"
