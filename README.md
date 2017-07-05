@@ -1,2 +1,2 @@
-# osm-im
-Opstree System Manager - Infrastructure Manager
+# osm-jim
+Opstree System Manager - Jenkins Infrastructure Manager
