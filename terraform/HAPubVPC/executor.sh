@@ -18,8 +18,15 @@ function validateInputs() {
 
 function createSetup() {
   logStatement "Creating setup"
+  echo "aws_region = \"${aws_region}\"" > data.tfvars
+  echo "vpc_cidr = \"${vpc_cidr}\"" >> data.tfvars
+  echo "vpc_name = \"${vpc_name}\"" >> data.tfvars
+  echo "route53_zone_name = \"${zone_name}\"" >> data.tfvars
+  echo "public_subnet_aza_cidr = \"${public_subnet_aza_cidr}\"" >> data.tfvars
+  echo "public_subnet_azb_cidr = \"${public_subnet_azb_cidr}\"" >> data.tfvars
+
   pushd ..
-  make setup-HAPubVPC REGION=$1 ROUTE_53_ZONE_NAME=$2 VPC_CIDR=$3 PUB_SN_A_CIDR=$4 PUB_SN_B_CIDR=$5 VPC_NAME=$6 AWS_ACCESS_KEY_ID=$7 AWS_SECRET_ACCESS_KEY=$8
+  make setup-HAPubVPC AWS_ACCESS_KEY_ID=$1 AWS_SECRET_ACCESS_KEY=$2
 
   popd
 }
