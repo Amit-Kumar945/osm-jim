@@ -9,12 +9,12 @@ parameters {
 	choiceParam('INSTANCE_TYPE', ['t2.micro', 't2.medium'])
 	stringParam('VPC_ZONE_ID', 'Z3O4QAA955WU8G')
 	password {
-     	 name('AWS_ACCESS_KEY_ID')
-      	 defaultValue(null)
+     	name('AWS_ACCESS_KEY_ID')
+      	defaultValue('AWS_ACCESS_KEY_ID')
     	}
 	password {
-         name('AWS_SECRET_ACCESS_KEY')
-         defaultValue(null)
+        name('AWS_SECRET_ACCESS_KEY')
+        defaultValue('AWS_SECRET_ACCESS_KEY')
         }
     }
 	label('master')
