@@ -30,6 +30,6 @@ function destroySetup() {
   popd
 }
 
-validateInputs
-createSetup
+#validateInputs
+#createSetup
 #destroySetup
