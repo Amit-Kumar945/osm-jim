@@ -8,3 +8,12 @@ module "vpc" {
   name              = "${var.vpc_name}"
   route53_zone_name = "${var.route53_zone_name}"
 }
+
+module "public_subnet_aza" {
+  source                  = "github.com/opstree-terraform/subnet"
+  vpc_id                  = "${module.vpc.id}"
+  cidr                    = "${var.public_subnet_aza_cidr}"
+  az                      = "${var.aws_region}a"
+  map_public_ip_on_launch = "true"
+  name                    = "${var.vpc_name}-public_subnet_aza"
+}

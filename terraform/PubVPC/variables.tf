@@ -5,3 +5,5 @@ variable "vpc_cidr" {}
 variable "vpc_name" {}
 
 variable "route53_zone_name" {}
+
+variable "public_subnet_aza_cidr" {}
