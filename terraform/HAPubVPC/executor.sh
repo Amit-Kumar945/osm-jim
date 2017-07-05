@@ -34,6 +34,6 @@ function createSetup() {
 function destroySetup() {
   logStatement "Destroying Setup"
   pushd ..
-  make destroy-HAPubVPC REGION=$1 ROUTE_53_ZONE_NAME=$2 VPC_CIDR=$3 VPC_NAME=$4
+  make destroy-HAPubVPC AWS_ACCESS_KEY_ID=$1 AWS_SECRET_ACCESS_KEY=$2
   popd
 }
