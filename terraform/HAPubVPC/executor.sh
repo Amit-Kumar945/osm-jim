@@ -22,8 +22,8 @@ function createSetup() {
   echo "vpc_cidr = \"${vpc_cidr}\"" >> data.tfvars
   echo "vpc_name = \"${vpc_name}\"" >> data.tfvars
   echo "route53_zone_name = \"${zone_name}\"" >> data.tfvars
-  echo "public_subnet_aza_cidr = \"${public_subnet_aza_cidr}\"" >> data.tfvars
-  echo "public_subnet_azb_cidr = \"${public_subnet_azb_cidr}\"" >> data.tfvars
+  echo "public_subnet_aza_cidr = \"${subnet_a_cidr}\"" >> data.tfvars
+  echo "public_subnet_azb_cidr = \"${subnet_b_cidr}\"" >> data.tfvars
 
   pushd ..
   make setup-HAPubVPC AWS_ACCESS_KEY_ID=$1 AWS_SECRET_ACCESS_KEY=$2
