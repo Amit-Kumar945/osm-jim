@@ -19,17 +19,13 @@ function validateInputs() {
 function createSetup() {
   logStatement "Creating setup"
   pushd ..
-  make setup-simplePubVPC REGION=ap-south-1 ROUTE_53_ZONE_NAME=internal.sandy.com VPC_CIDR=10.0.0.0/16 VPC_NAME=sandy
+  make setup-simplePubVPC REGION=$1 ROUTE_53_ZONE_NAME=$2 VPC_CIDR=$3 VPC_NAME=$4
   popd
 }
 
 function destroySetup() {
   logStatement "Destroying Setup"
   pushd ..
-  make destroy-simplePubVPC REGION=ap-south-1 ROUTE_53_ZONE_NAME=internal.sandy.com VPC_CIDR=10.0.0.0/16 VPC_NAME=sandy
+  make destroy-simplePubVPC REGION=$1 ROUTE_53_ZONE_NAME=$2 VPC_CIDR=$3 VPC_NAME=$4
   popd
 }
-
-#validateInputs
-#createSetup
-#destroySetup
