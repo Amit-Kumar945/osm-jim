@@ -1,9 +1,8 @@
 #!/bin/bash
-#rm -rf .terraform
-#rm -f terraform.tfstate*
-#terraform get
-#terraform plan -var-file="data.tfvars"
-#terraform apply -var-file="data.tfvars"
-#server_ip=`terraform output server_ip`
-server_ip=107.23.83.128
+rm -rf .terraform
+rm -f terraform.tfstate*
+terraform get
+terraform plan -var-file="data.tfvars"
+terraform apply -var-file="data.tfvars"
+server_ip=`terraform output server_ip`
 ssh -tt -o StrictHostKeyChecking=no centos@${server_ip} "sudo cp ~/.ssh/authorized_keys /root/.ssh/authorized_keys"
