@@ -9,3 +9,7 @@ variable "route53_zone_name" {}
 variable "public_subnet_aza_cidr" {}
 
 variable "public_subnet_azb_cidr" {}
+
+variable "pub_key_path" {
+  default = "~/.ssh/id_rsa.pub"
+}
