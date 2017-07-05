@@ -1,5 +1,6 @@
 #!/bin/bash
 rm -rf .terraform
+rm -f terraform.tfstate*
 terraform get
 terraform plan -var-file="data.tfvars"
 terraform apply -var-file="data.tfvars"
