@@ -24,7 +24,7 @@ job('ansible-command') {
           stringParam('Command')
 }
   
-   label('{{LABEL}}')
+   label('Facebook')
 
 steps {
     shell(
