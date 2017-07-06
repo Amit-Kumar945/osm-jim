@@ -11,10 +11,12 @@ parameters {
 	password {
      	name('AWS_ACCESS_KEY_ID')
       	defaultValue('AWS_ACCESS_KEY_ID')
+	description('Aws credentilas')
     	}
 	password {
         name('AWS_SECRET_ACCESS_KEY')
         defaultValue('AWS_SECRET_ACCESS_KEY')
+	description('Aws credentilas')
         }
     }
 	label('master')
