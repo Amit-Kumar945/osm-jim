@@ -37,3 +37,13 @@ function destroySetup() {
   make destroy-PubVPC AWS_ACCESS_KEY_ID=$1 AWS_SECRET_ACCESS_KEY=$2
   popd
 }
+
+function provisionInfraViaTerraform() {
+  terraform get
+  terraform plan -var-file="data.tfvars"
+  terraform apply -var-file="data.tfvars"
+}
+
+function deProvisionInfraViaTerraform() {
+  terraform destroy -force -var-file="data.tfvars"
+}
