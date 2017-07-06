@@ -29,9 +29,10 @@ job('ansible-command') {
 steps {
     shell(
 
+    '#!/bin/bash -x\n'  +
     'name=$Command\n'  +
-    
-'ansible ${Deployment_Group} -a  "$name"\n' 
+    'export ANSIBLE_HOST_KEY_CHECKING=False\n'  +
+    'ansible ${Deployment_Group} -a  "$name"\n' 
 
 )
 }
